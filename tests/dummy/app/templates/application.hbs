@@ -4,6 +4,10 @@
     Disable Focus Tracking:
     {{input type="checkbox" checked=disableTrap}}
   </label>
+  <br>
+  <label>
+    Enable Focus Cycling: {{input type="checkbox" checked=cycle}}
+  </label>
 </form>
 
 <br>
@@ -11,7 +15,7 @@
 <form action="">
   <label>Should never get focus: <input type="text" name="never-focus-1"></label>
 
-  {{#focus-trapper tagName="fieldset" cycle=true disable=disableTrap}}
+  {{#focus-trapper tagName="fieldset" cycle=cycle disable=disableTrap}}
     <legend>fieldset with trapped focus</legend>
     <label>First trapped focus: <input type="text" name="first-trapped"></label>
     <label>Middle trapped focus: <input type="text" name="middle-trapped"></label>
