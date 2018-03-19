@@ -1,3 +1,25 @@
-<h2 id="title">Welcome to Ember</h2>
+<h1 id="title">Ember Focus Trapper</h1>
+<form action="">
+  <label>
+    Disable Focus Tracking:
+    {{input type="checkbox" checked=disableTrap}}
+  </label>
+</form>
+
+<br>
+
+<form action="">
+  <label>Should never get focus: <input type="text" name="never-focus-1"></label>
+
+  {{#focus-trapper tagName="fieldset" cycle=true disable=disableTrap}}
+    <legend>fieldset with trapped focus</legend>
+    <label>First trapped focus: <input type="text" name="first-trapped"></label>
+    <label>Middle trapped focus: <input type="text" name="middle-trapped"></label>
+    <label>Last trapped focus: <input type="text" name="last-trapped"></label>
+  {{/focus-trapper}}
+
+  <label>Should never get focus: <input type="text" name="never-focus-2"></label>
+
+</form>
 
 {{outlet}}
