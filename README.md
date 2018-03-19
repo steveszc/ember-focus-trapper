@@ -26,9 +26,19 @@ Take care not to render more than one `focus-trapper` at any given time... you'l
 
 ```
 
-## Options:
+Options
+------------------------------------------------------------------------------
 - disable (boolean, defaults to false) : When disable=true all focus management behavior is disabled.
 - cycle (boolean, defaults to false) : When cycle=true, focus-trapper will cycle focus to the first focusable element when tabbing from the last focusable element, and will cycle focus to the last focusable element when shift-tabbing from the first focusable element. When cycle=false, tabbing from the last focusable element keeps focus on that element, and shift-tabbing from the first focusable element keeps focus on that element.
+
+Things to be aware of
+------------------------------------------------------------------------------
+- _Provide an escape_:
+Whenever you use the focus-trapper, be sure there is some button or action that the user can trigger from within the focus trapper to escape.
+- _Returning focus_:
+Once the focus-trapper becomes disabled or is removed from the page, be sure to return the user's focus to where ever it was previously (ex. when closing a modal containing a focus trapper, the user's focus should be returned to the button they clicked to open the modal)
+- _Use one, and only one, focus-trapper at a time._:
+Using multiple focus trappers at the same time is not supported and will cause bad things to happen. Don't do it. If you absolutely can't avoid it, at least make sure to set disabled=true on every focus-trapper except for one.
 
 Contributing
 ------------------------------------------------------------------------------
