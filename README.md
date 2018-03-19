@@ -27,8 +27,8 @@ Take care not to render more than one `focus-trapper` at any given time... you'l
 ```
 
 ## Options:
-- disable (boolean, defaults to false) : When disable=true, the focus-trapper does nothing.
-- cycle (boolean, defaults to false) : When enabled, focus-trapper will cycle focus to the first focusable element when tabbing from the last focusable element, and will cycle focus to the last focusable element when shift-tabbing from the first focusable element. When disabled, tabbing from the last focusable element keeps focus on that element, and shift-tabbing from the first focusable element keeps focus on that element.
+- disable (boolean, defaults to false) : When disable=true all focus management behavior is disabled.
+- cycle (boolean, defaults to false) : When cycle=true, focus-trapper will cycle focus to the first focusable element when tabbing from the last focusable element, and will cycle focus to the last focusable element when shift-tabbing from the first focusable element. When cycle=false, tabbing from the last focusable element keeps focus on that element, and shift-tabbing from the first focusable element keeps focus on that element.
 
 Contributing
 ------------------------------------------------------------------------------
