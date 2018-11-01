@@ -20,11 +20,16 @@ const FOCUSABLE = [
 export default Component.extend({
   layout,
 
-  didRender() {
+  didInsertElement() {
     // run this on every render in case the html contents change
     this.set('allFocusableEl', this.get('element').querySelectorAll(FOCUSABLE.join(', ')));
     // move focus into the focus-trapper if focus is outside the trapper
     this.get('refocus').bind(this)();
+  },
+
+  didRender() {
+    // run this on every render in case the html contents change
+    this.set('allFocusableEl', this.get('element').querySelectorAll(FOCUSABLE.join(', ')));
   },
 
   firstFocusableEl: computed('allFocusableEl', function() {
