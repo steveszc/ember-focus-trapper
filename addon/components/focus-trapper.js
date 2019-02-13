@@ -13,7 +13,7 @@ const FOCUSABLE = [
   'button:not([disabled])',
   'object',
   'embed',
-  '*[tabindex]',
+  '*[tabindex]:not([tabindex="-1"])',
   '*[contenteditable]'
 ];
 
