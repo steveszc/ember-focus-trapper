@@ -24,7 +24,7 @@ export default Component.extend({
     // run this on every render in case the html contents change
     this.set('allFocusableEl', this.get('element').querySelectorAll(FOCUSABLE.join(', ')));
     // move focus into the focus-trapper if focus is outside the trapper
-    this.get('refocus').bind(this)();
+    this.get('refocus').call(this);
   },
 
   didRender() {
@@ -45,13 +45,13 @@ export default Component.extend({
 
   keyDown(event) {
     if (event.keyCode === 9) {
-      this.get('handleTab').bind(this)(event);
+      this.get('handleTab').call(this, event);
     }
   },
 
   focusOut(event) {
     if (!this.get('element').contains(event.relatedTarget)) {
-      this.get('refocus').bind(this)();
+      this.get('refocus').call(this);
     }
   },
 
