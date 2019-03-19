@@ -16,14 +16,14 @@ Usage
 This is a block-only component, intended to be wrapped around a chunk of html that includes focusable elements.
 As soon as the `focus-trapper` is rendered, it will only allow focusable elements within the yielded block to be focused.
 Take care not to render more than one `focus-trapper` at any given time... you'll have a bad time.
-```
+
+```hbs
 {{#focus-trapper disable=false}}
   <form action="">
     <label>You must fill out this input field: <input type="text"></label>
     <label>And this input field: <input type="text"></label>
   </form>
 {{/focus-trapper}}
-
 ```
 
 Options
