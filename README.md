@@ -1,6 +1,6 @@
 ember-focus-trapper
 ==============================================================================
-[![Build Status](https://travis-ci.org/steveszc/ember-focus-trapper.svg?branch=master)](https://travis-ci.org/steveszc/ember-focus-trapper) [![Ember Observer Score](https://emberobserver.com/badges/ember-focus-trapper.svg)](https://emberobserver.com/addons/ember-focus-trapper) [![npm version](https://badge.fury.io/js/ember-focus-trapper.svg)](http://badge.fury.io/js/ember-focus-trapper)
+[![Build Status](https://travis-ci.com/steveszc/ember-focus-trapper.svg?branch=master)](https://travis-ci.com/steveszc/ember-focus-trapper) [![Ember Observer Score](https://emberobserver.com/badges/ember-focus-trapper.svg)](https://emberobserver.com/addons/ember-focus-trapper) [![npm version](https://badge.fury.io/js/ember-focus-trapper.svg)](http://badge.fury.io/js/ember-focus-trapper)
 
 This is an ember addon for trapping keyboard focus.
 
